@@ -1,0 +1,350 @@
+/* Apple Standby Clock Extension - Detached Window Styles */
+
+/* Theme Variables - Same as popup */
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --date-color: rgba(255, 255, 255, 0.6);
+    --glow-color: rgba(255, 255, 255, 0.1);
+    --accent-color: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --card-bg: rgba(255, 255, 255, 0.02);
+    --hover-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Dark Blue Theme */
+body.theme-dark-blue {
+    --bg-color: #0f1419;
+    --text-color: #64b5f6;
+    --date-color: rgba(100, 181, 246, 0.7);
+    --glow-color: rgba(100, 181, 246, 0.2);
+}
+
+/* Purple Theme */
+body.theme-purple {
+    --bg-color: #1a0a2e;
+    --text-color: #bb86fc;
+    --date-color: rgba(187, 134, 252, 0.7);
+    --glow-color: rgba(187, 134, 252, 0.2);
+}
+
+/* Green Theme */
+body.theme-green {
+    --bg-color: #0d1b0d;
+    --text-color: #69f0ae;
+    --date-color: rgba(105, 240, 174, 0.7);
+    --glow-color: rgba(105, 240, 174, 0.2);
+}
+
+/* Red Theme */
+body.theme-red {
+    --bg-color: #1f0a0a;
+    --text-color: #ff6b6b;
+    --date-color: rgba(255, 107, 107, 0.7);
+    --glow-color: rgba(255, 107, 107, 0.2);
+}
+
+/* Orange Theme */
+body.theme-orange {
+    --bg-color: #1f1408;
+    --text-color: #ff9500;
+    --date-color: rgba(255, 149, 0, 0.7);
+    --glow-color: rgba(255, 149, 0, 0.2);
+}
+
+/* Pink Theme */
+body.theme-pink {
+    --bg-color: #1f0a1f;
+    --text-color: #ff69b4;
+    --date-color: rgba(255, 105, 180, 0.7);
+    --glow-color: rgba(255, 105, 180, 0.2);
+}
+
+/* Midnight Theme */
+body.theme-midnight {
+    --bg-color: #0a0a0f;
+    --text-color: #87ceeb;
+    --date-color: rgba(135, 206, 235, 0.7);
+    --glow-color: rgba(135, 206, 235, 0.3);
+}
+
+/* Aqua Theme */
+body.theme-aqua {
+    --bg-color: #001a1a;
+    --text-color: #00ffff;
+    --date-color: rgba(0, 255, 255, 0.8);
+    --glow-color: rgba(0, 255, 255, 0.2);
+}
+
+/* Sunset Theme */
+body.theme-sunset {
+    --bg-color: #2d1b0e;
+    --text-color: #ff8c42;
+    --date-color: rgba(255, 140, 66, 0.7);
+    --glow-color: rgba(255, 140, 66, 0.3);
+}
+
+/* Forest Theme */
+body.theme-forest {
+    --bg-color: #0d1b0d;
+    --text-color: #90ee90;
+    --date-color: rgba(144, 238, 144, 0.7);
+    --glow-color: rgba(144, 238, 144, 0.2);
+}
+
+/* Ocean Theme */
+body.theme-ocean {
+    --bg-color: #051219;
+    --text-color: #4682b4;
+    --date-color: rgba(70, 130, 180, 0.8);
+    --glow-color: rgba(70, 130, 180, 0.3);
+}
+
+/* Neon Theme */
+body.theme-neon {
+    --bg-color: #0a0a0a;
+    --text-color: #39ff14;
+    --date-color: rgba(57, 255, 20, 0.8);
+    --glow-color: rgba(57, 255, 20, 0.4);
+}
+
+/* Retro Theme */
+body.theme-retro {
+    --bg-color: #2a0845;
+    --text-color: #ff00ff;
+    --date-color: rgba(255, 0, 255, 0.7);
+    --glow-color: rgba(255, 0, 255, 0.3);
+}
+
+/* Cyber Theme */
+body.theme-cyber {
+    --bg-color: #0f0f0f;
+    --text-color: #00d4aa;
+    --date-color: rgba(0, 212, 170, 0.8);
+    --glow-color: rgba(0, 212, 170, 0.3);
+}
+
+/* Minimal Theme */
+body.theme-minimal {
+    --bg-color: #fafafa;
+    --text-color: #333333;
+    --date-color: rgba(51, 51, 51, 0.7);
+    --glow-color: rgba(51, 51, 51, 0.1);
+}
+
+/* Vintage Theme */
+body.theme-vintage {
+    --bg-color: #2c2416;
+    --text-color: #d4af37;
+    --date-color: rgba(212, 175, 55, 0.8);
+    --glow-color: rgba(212, 175, 55, 0.2);
+}
+
+/* Aurora Theme */
+body.theme-aurora {
+    --bg-color: #0d1929;
+    --text-color: #b19cd9;
+    --date-color: rgba(177, 156, 217, 0.8);
+    --glow-color: rgba(177, 156, 217, 0.3);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    background-image: 
+        radial-gradient(circle at 25% 25%, var(--glow-color) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, var(--glow-color) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, var(--accent-color) 0%, transparent 70%);
+    position: relative;
+}
+
+/* Main Container */
+.detached-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    padding: 20px;
+}
+
+/* Top Controls - Positioned in top-right corner */
+.mini-controls {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.mini-control {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(145deg, var(--card-bg), rgba(255, 255, 255, 0.01));
+    color: var(--text-color);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(20px);
+    opacity: 0.7;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.mini-control:hover {
+    opacity: 1;
+    background: linear-gradient(145deg, var(--hover-bg), rgba(255, 255, 255, 0.03));
+    transform: scale(1.05);
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.3),
+        0 0 20px var(--glow-color),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.mini-control:active {
+    transform: scale(0.95);
+    transition-duration: 0.1s;
+}
+
+/* Clock Display - Centered and larger */
+.clock-display {
+    text-align: center;
+    padding: 30px 40px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, var(--card-bg), rgba(255, 255, 255, 0.01));
+    backdrop-filter: blur(30px);
+    border: 1px solid var(--border-color);
+    box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    min-width: 220px;
+}
+
+.clock-display::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--text-color), transparent);
+    opacity: 0.4;
+}
+
+.clock-display::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, var(--glow-color), transparent);
+    animation: rotate 20s linear infinite;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Time Display - Much larger */
+.time-container {
+    font-size: 4rem;
+    font-weight: 200;
+    color: var(--text-color);
+    text-shadow: 
+        0 0 40px var(--glow-color), 
+        0 0 80px var(--glow-color),
+        0 0 120px var(--glow-color);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+.time-part {
+    display: inline-block;
+}
+
+.time-separator {
+    animation: blink 2s ease-in-out infinite;
+    margin: 0 4px;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+.date-display {
+    font-size: 1.1rem;
+    color: var(--date-color);
+    opacity: 0.95;
+    font-weight: 300;
+    text-shadow: 0 0 20px var(--glow-color);
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 350px) {
+    .time-container {
+        font-size: 3rem;
+    }
+    
+    .date-display {
+        font-size: 0.9rem;
+    }
+    
+    .clock-display {
+        padding: 20px 30px;
+        min-width: 180px;
+    }
+    
+    .mini-control {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Focus and accessibility */
+.mini-control:focus {
+    outline: 2px solid var(--text-color);
+    outline-offset: 2px;
+}

@@ -1,0 +1,62 @@
+{
+  "name": "apple-standby-clock",
+  "version": "2.0.0",
+  "description": "A beautiful Apple Standby-style clock with 18 themes, browser extension, and professional design",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server .",
+    "build": "echo 'Static site - no build process needed'",
+    "test": "echo 'No tests configured'",
+    "lint": "npx eslint js/ --ext .js",
+    "format": "npx prettier --write .",
+    "deploy": "echo 'Deploy to your preferred hosting service'"
+  },
+  "keywords": [
+    "clock",
+    "apple",
+    "standby",
+    "time",
+    "themes",
+    "professional",
+    "pwa",
+    "responsive",
+    "accessibility",
+    "extension",
+    "chrome",
+    "monkeytype"
+  ],
+  "author": "Rijan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/apple-standby-clock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/apple-standby-clock/issues"
+  },
+  "homepage": "https://yourusername.github.io/apple-standby-clock",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0",
+    "live-server": "^1.2.0",
+    "serve": "^14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.html",
+    "css/",
+    "js/",
+    "assets/",
+    "manifest.json",
+    "sw.js",
+    "README.md"
+  ]
+}

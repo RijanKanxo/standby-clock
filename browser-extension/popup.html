@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Standby Clock</title>
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <!-- Mini Clock Display -->
+        <div class="mini-clock" id="miniClock">
+            <div class="time-display">
+                <span class="time-part" id="hours">00</span>
+                <span class="time-separator">:</span>
+                <span class="time-part" id="minutes">00</span>
+            </div>
+            <div class="date-display" id="dateDisplay">
+                Loading date...
+            </div>
+        </div>
+        
+        <!-- Control Buttons -->
+        <div class="controls">
+            <button class="control-btn theme-btn" id="themeBtn" title="Change Theme">
+                🎨
+            </button>
+            <button class="control-btn detach-btn" id="detachBtn" title="Open Detached Window">
+                📱
+            </button>
+            <button class="control-btn fullsize-btn" id="fullsizeBtn" title="Open Full Clock">
+                🖥️
+            </button>
+        </div>
+        
+        <!-- Badge Toggle -->
+        <div class="badge-toggle-container">
+            <label class="badge-toggle">
+                <input type="checkbox" id="badgeToggle" checked>
+                <span class="toggle-slider"></span>
+                <span class="toggle-text">Show time in toolbar</span>
+            </label>
+        </div>
+        
+        <!-- Theme Selector -->
+        <div class="theme-selector" id="themeSelector">
+            <div class="theme-option" data-theme="default">
+                <div class="theme-preview default"></div>
+                <span>Classic</span>
+            </div>
+            <div class="theme-option" data-theme="dark-blue">
+                <div class="theme-preview dark-blue"></div>
+                <span>Blue</span>
+            </div>
+            <div class="theme-option" data-theme="purple">
+                <div class="theme-preview purple"></div>
+                <span>Purple</span>
+            </div>
+            <div class="theme-option" data-theme="green">
+                <div class="theme-preview green"></div>
+                <span>Green</span>
+            </div>
+            <div class="theme-option" data-theme="red">
+                <div class="theme-preview red"></div>
+                <span>Red</span>
+            </div>
+            <div class="theme-option" data-theme="orange">
+                <div class="theme-preview orange"></div>
+                <span>Orange</span>
+            </div>
+            <div class="theme-option" data-theme="pink">
+                <div class="theme-preview pink"></div>
+                <span>Pink</span>
+            </div>
+            <div class="theme-option" data-theme="midnight">
+                <div class="theme-preview midnight"></div>
+                <span>Midnight</span>
+            </div>
+            <div class="theme-option" data-theme="aqua">
+                <div class="theme-preview aqua"></div>
+                <span>Aqua</span>
+            </div>
+            <div class="theme-option" data-theme="sunset">
+                <div class="theme-preview sunset"></div>
+                <span>Sunset</span>
+            </div>
+            <div class="theme-option" data-theme="forest">
+                <div class="theme-preview forest"></div>
+                <span>Forest</span>
+            </div>
+            <div class="theme-option" data-theme="ocean">
+                <div class="theme-preview ocean"></div>
+                <span>Ocean</span>
+            </div>
+            <div class="theme-option" data-theme="neon">
+                <div class="theme-preview neon"></div>
+                <span>Neon</span>
+            </div>
+            <div class="theme-option" data-theme="retro">
+                <div class="theme-preview retro"></div>
+                <span>Retro</span>
+            </div>
+            <div class="theme-option" data-theme="cyber">
+                <div class="theme-preview cyber"></div>
+                <span>Cyber</span>
+            </div>
+            <div class="theme-option" data-theme="minimal">
+                <div class="theme-preview minimal"></div>
+                <span>Minimal</span>
+            </div>
+            <div class="theme-option" data-theme="vintage">
+                <div class="theme-preview vintage"></div>
+                <span>Vintage</span>
+            </div>
+            <div class="theme-option" data-theme="aurora">
+                <div class="theme-preview aurora"></div>
+                <span>Aurora</span>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="js/popup.js"></script>
+</body>
+</html>

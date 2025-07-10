@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apple Standby Clock - A beautiful, professional clock application with multiple themes">
+    <meta name="keywords" content="clock, apple, standby, time, themes, professional">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Apple Standby Clock">
+    <meta property="og:description" content="Professional clock application with Apple Standby aesthetics">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="./assets/images/preview.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Apple Standby Clock">
+    <meta name="twitter:description" content="Professional clock application with Apple Standby aesthetics">
+    <meta name="twitter:image" content="./assets/images/preview.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="./css/styles.css" as="style">
+    <link rel="preload" href="./js/app.js" as="script">
+    
+    <!-- Google Fonts for Theme Variations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Mono:wght@400;700&family=Poppins:wght@300;400;600&family=Inter:wght@300;400;500&family=Roboto+Mono:wght@400;500&family=Orbitron:wght@400;700;900&family=Press+Start+2P&family=Rajdhani:wght@300;400;600&family=Courier+Prime:wght@400;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <title>Apple Standby Clock</title>
+</head>
+<body>
+    <!-- Theme Toggle Container -->
+    <div class="theme-toggle-container">
+        <button class="theme-toggle" aria-label="Cycle through color themes">
+            <span aria-hidden="true">🎨</span>
+            <span>Theme</span>
+        </button>
+        
+        <!-- Theme Dropdown Menu -->
+        <div class="theme-dropdown" id="themeDropdown">
+            <div class="theme-dropdown-item" data-theme="default">
+                <div class="theme-preview default"></div>
+                <span>Classic Black</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="dark-blue">
+                <div class="theme-preview dark-blue"></div>
+                <span>Dark Blue</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="purple">
+                <div class="theme-preview purple"></div>
+                <span>Purple</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="green">
+                <div class="theme-preview green"></div>
+                <span>Green</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="red">
+                <div class="theme-preview red"></div>
+                <span>Red</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="orange">
+                <div class="theme-preview orange"></div>
+                <span>Orange</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="pink">
+                <div class="theme-preview pink"></div>
+                <span>Pink</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="midnight">
+                <div class="theme-preview midnight"></div>
+                <span>Midnight</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="aqua">
+                <div class="theme-preview aqua"></div>
+                <span>Aqua</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="sunset">
+                <div class="theme-preview sunset"></div>
+                <span>Sunset</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="forest">
+                <div class="theme-preview forest"></div>
+                <span>Forest</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="ocean">
+                <div class="theme-preview ocean"></div>
+                <span>Ocean</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="neon">
+                <div class="theme-preview neon"></div>
+                <span>Neon</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="retro">
+                <div class="theme-preview retro"></div>
+                <span>Retro</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="cyber">
+                <div class="theme-preview cyber"></div>
+                <span>Cyber</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="minimal">
+                <div class="theme-preview minimal"></div>
+                <span>Minimal</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="vintage">
+                <div class="theme-preview vintage"></div>
+                <span>Vintage</span>
+            </div>
+            <div class="theme-dropdown-item" data-theme="aurora">
+                <div class="theme-preview aurora"></div>
+                <span>Aurora</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Clock Display -->
+    <main>
+        <div id="clock" role="timer" aria-live="polite" aria-label="Current time">
+            <div class="time-container">
+                <span class="time-part" aria-label="Hours">00</span>
+                <span class="time-separator" aria-hidden="true">:</span>
+                <span class="time-part" aria-label="Minutes">00</span>
+            </div>
+        </div>
+        
+        <!-- Date Display -->
+        <div class="date-display" aria-label="Current date">
+            <div class="current-date">Loading...</div>
+        </div>
+    </main>
+    
+    <!-- Enhanced Theme Selector with Navigation -->
+    <nav class="theme-indicator" role="navigation" aria-label="Theme selector">
+        <!-- Previous Theme Button -->
+        <button class="theme-nav-btn theme-prev" 
+                aria-label="Previous theme" 
+                title="Previous theme">
+            <span aria-hidden="true">‹</span>
+        </button>
+        
+        <!-- Current Theme Display -->
+        <div class="theme-current">
+            <div class="theme-current-dot default" id="currentThemeDot"></div>
+            <span class="theme-current-name" id="currentThemeName">Classic Black</span>
+        </div>
+        
+        <!-- Next Theme Button -->
+        <button class="theme-nav-btn theme-next" 
+                aria-label="Next theme" 
+                title="Next theme">
+            <span aria-hidden="true">›</span>
+        </button>
+        
+        <!-- Theme Dots Container (Hidden on mobile, visible on desktop) -->
+        <div class="theme-dots-container">
+            <div class="theme-dot default active" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Classic Black theme"
+                 data-theme="default">
+            </div>
+            <div class="theme-dot dark-blue" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Dark Blue theme"
+                 data-theme="dark-blue">
+            </div>
+            <div class="theme-dot purple" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Purple theme"
+                 data-theme="purple">
+            </div>
+            <div class="theme-dot green" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Green theme"
+                 data-theme="green">
+            </div>
+            <div class="theme-dot red" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Red theme"
+                 data-theme="red">
+            </div>
+            <div class="theme-dot orange" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Orange theme"
+                 data-theme="orange">
+            </div>
+            <div class="theme-dot pink" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Pink theme"
+                 data-theme="pink">
+            </div>
+            <div class="theme-dot midnight" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Midnight theme"
+                 data-theme="midnight">
+            </div>
+            <div class="theme-dot aqua" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Aqua theme"
+                 data-theme="aqua">
+            </div>
+            <div class="theme-dot sunset" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Sunset theme"
+                 data-theme="sunset">
+            </div>
+            <div class="theme-dot forest" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Forest theme"
+                 data-theme="forest">
+            </div>
+            <div class="theme-dot ocean" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Ocean theme"
+                 data-theme="ocean">
+            </div>
+            <div class="theme-dot neon" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Neon theme"
+                 data-theme="neon">
+            </div>
+            <div class="theme-dot retro" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Retro theme"
+                 data-theme="retro">
+            </div>
+            <div class="theme-dot cyber" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Cyber theme"
+                 data-theme="cyber">
+            </div>
+            <div class="theme-dot minimal" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Minimal theme"
+                 data-theme="minimal">
+            </div>
+            <div class="theme-dot vintage" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Vintage theme"
+                 data-theme="vintage">
+            </div>
+            <div class="theme-dot aurora" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-label="Switch to Aurora theme"
+                 data-theme="aurora">
+            </div>
+        </div>
+    </nav>
+    
+    <!-- JavaScript -->
+    <script src="./js/app.js"></script>
+</body>
+</html>

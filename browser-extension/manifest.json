@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Apple Standby Clock",
+  "version": "1.0.1",
+  "description": "A beautiful Apple Standby-style clock that can float anywhere on your screen",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "system.display",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Apple Standby Clock"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline';"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "detached.html", "index.html", "css/*", "js/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
