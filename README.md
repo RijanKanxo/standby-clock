@@ -33,7 +33,7 @@ This repository contains two related but separate applications:
 ## 🎯 Quick Start
 
 ### 🌐 Web Application
-**Live Demo**: https://yourusername.github.io/apple-standby-clock/
+**Live Demo**: https://RijanKanxo.github.io/standby-clock/
 
 **Local Development**:
 ```bash
