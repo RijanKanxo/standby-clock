@@ -1,3 +1,8 @@
+# Extension Development - Security Sensitive Files
+browser-extension/*.pem
+browser-extension/*.crx
+browser-extension/extension.zip
+
 # Logs
 logs
 *.log

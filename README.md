@@ -32,18 +32,38 @@ This repository contains two related but separate applications:
 
 ## 🎯 Quick Start
 
-### Web Application
+### 🌐 Web Application
+**Live Demo**: https://yourusername.github.io/apple-standby-clock/
+
+**Local Development**:
 ```bash
 cd web-app
 # Open index.html in browser or use local server
 npx http-server . -p 3000
 ```
 
-### Browser Extension
+### 🔌 Browser Extension
+**Chrome Web Store**: *Coming Soon*
+
+**Development Install**:
 1. Open `chrome://extensions/`
 2. Enable "Developer mode"
 3. Click "Load unpacked" → select `browser-extension` folder
 4. Pin extension to toolbar
+
+## 🚀 Deployment
+
+### Web App (GitHub Pages)
+1. Push code to GitHub repository
+2. Go to Settings → Pages
+3. Source: "GitHub Actions"
+4. The workflow will automatically deploy from `web-app/` folder
+5. Your app will be live at: `https://yourusername.github.io/repository-name/`
+
+### Extension (Chrome Web Store)
+1. Create developer account at [Chrome Web Store Developer Console](https://chrome.google.com/webstore/devconsole/)
+2. Package extension: `cd browser-extension && zip -r extension.zip . -x "*.pem" "*.crx"`
+3. Upload to Web Store following [publishing guide](./documentation/DEPLOYMENT.md)
 
 ## 📁 Project Structure
 
