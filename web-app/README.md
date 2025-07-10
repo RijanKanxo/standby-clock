@@ -15,7 +15,7 @@ A beautiful, responsive clock application inspired by Apple's standby mode with 
 ## 🚀 Quick Start
 
 ### Online Demo
-Visit the live demo: [Your deployed URL here]
+Visit the live demo: [https://rijankanxo.github.io/apple-standby-clock/](https://rijankanxo.github.io/apple-standby-clock/)
 
 ### Local Development
 1. Clone this repository
