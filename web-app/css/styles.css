@@ -682,6 +682,77 @@ body::before {
     text-decoration: underline;
 }
 
+/* Minimal Theme UI Fixes */
+body.theme-minimal .theme-dropdown {
+    background: #fff;
+    border: 2px solid #333333;
+    color: #333333;
+}
+
+body.theme-minimal .theme-dropdown::before {
+    border-bottom: 7px solid #333333;
+}
+
+body.theme-minimal .theme-dropdown-item {
+    color: #333333;
+    background: transparent;
+}
+
+body.theme-minimal .theme-dropdown-item:hover,
+body.theme-minimal .theme-dropdown-item.active {
+    background: rgba(51, 51, 51, 0.08);
+    color: #111;
+}
+
+body.theme-minimal .theme-dropdown-item .theme-preview {
+    border-color: #333333;
+}
+
+body.theme-minimal .theme-indicator {
+    background: rgba(51, 51, 51, 0.05);
+    border: 2px solid #333333;
+}
+
+body.theme-minimal .theme-current {
+    background: rgba(51, 51, 51, 0.08);
+    border: 2px solid #333333;
+}
+
+body.theme-minimal .theme-current-dot {
+    border-color: #333333;
+}
+
+body.theme-minimal .theme-current-name {
+    color: #333333;
+}
+
+body.theme-minimal .theme-dot {
+    border-color: #333333;
+}
+
+body.theme-minimal .theme-nav-btn {
+    background: rgba(51, 51, 51, 0.1);
+    color: #333333;
+    border: 1px solid #333333;
+}
+
+body.theme-minimal .theme-nav-btn:hover {
+    background: rgba(51, 51, 51, 0.2);
+    color: #111;
+}
+
+body.theme-minimal .app-footer p,
+body.theme-minimal .app-footer .github-link {
+    color: #333333 !important;
+    opacity: 1 !important;
+}
+
+body.theme-minimal .theme-toggle {
+    border: 1px solid #333333 !important;
+    background: #fff !important;
+    color: #333333 !important;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     #clock {
@@ -949,4 +1020,75 @@ body::before {
     .date-display {
         color: black !important;
     }
+}
+
+/* Minimal Theme UI Fixes */
+body.theme-minimal .theme-dropdown {
+    background: #fff;
+    border: 2px solid #333333;
+    color: #333333;
+}
+
+body.theme-minimal .theme-dropdown::before {
+    border-bottom: 7px solid #333333;
+}
+
+body.theme-minimal .theme-dropdown-item {
+    color: #333333;
+    background: transparent;
+}
+
+body.theme-minimal .theme-dropdown-item:hover,
+body.theme-minimal .theme-dropdown-item.active {
+    background: rgba(51, 51, 51, 0.08);
+    color: #111;
+}
+
+body.theme-minimal .theme-dropdown-item .theme-preview {
+    border-color: #333333;
+}
+
+body.theme-minimal .theme-indicator {
+    background: rgba(51, 51, 51, 0.05);
+    border: 2px solid #333333;
+}
+
+body.theme-minimal .theme-current {
+    background: rgba(51, 51, 51, 0.08);
+    border: 2px solid #333333;
+}
+
+body.theme-minimal .theme-current-dot {
+    border-color: #333333;
+}
+
+body.theme-minimal .theme-current-name {
+    color: #333333;
+}
+
+body.theme-minimal .theme-dot {
+    border-color: #333333;
+}
+
+body.theme-minimal .theme-nav-btn {
+    background: rgba(51, 51, 51, 0.1);
+    color: #333333;
+    border: 1px solid #333333;
+}
+
+body.theme-minimal .theme-nav-btn:hover {
+    background: rgba(51, 51, 51, 0.2);
+    color: #111;
+}
+
+body.theme-minimal .app-footer p,
+body.theme-minimal .app-footer .github-link {
+    color: #333333 !important;
+    opacity: 1 !important;
+}
+
+body.theme-minimal .theme-toggle {
+    border: 1px solid #333333 !important;
+    background: #fff !important;
+    color: #333333 !important;
 }
